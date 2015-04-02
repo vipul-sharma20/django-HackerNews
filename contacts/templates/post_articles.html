@@ -1,0 +1,39 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+<div class='container'>
+<h2 align='center' class='heading'>Submit</h2>
+<form method='POST' action=''>
+    {% csrf_token %}
+    <table class="table table-condensed table-striped table-bordered profile" align="center">
+    	<tr>
+    		<td style="text-align:center">
+                    <p class="heading"><b>Description:</b></p>
+                </td>
+                <td style="text-align:center">
+                    {{ form.description }}
+                </td>
+    	</tr>
+    	<tr>
+    		<td style="text-align:center">
+                    <p class="heading"><b>Link:</b></p>
+    		</td>
+                <td style="text-align:center">
+                    {{ form.link }}
+                </td>
+    	</tr>
+        <tr>
+            <td></td>
+            <td style='text-align:center'>
+                <p>
+                <input type='submit' value='Post' align="center" class="btn btn-default heading" role="button"/>
+                </p>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</br
+</div>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends 'nav.html' %}
+<!DOCTYPE html>
+{% block content %}
+</br></br>
+	   <div align='center'>
+	        <h3 id='register'>Hi {{full_name}}, you are logged in! :)</h3>
+           </div>
+            <div id="loggedin">
+                <h3><a href='/accounts/articles'>View Articles</a></h3>
+                <table>
+                    </tr>
+		        <td><h4 id="register">Location: {{location}}</h4>
+                    </tr>
+                    <tr>
+        	        <h4 id="register">Name: {{full_name}}</h4>
+                    </tr>
+                    <tr>
+                        <h4 id="register">Reputation: {{reputation}}</h4>
+                    </tr>
+            </div>
+{% endblock %}

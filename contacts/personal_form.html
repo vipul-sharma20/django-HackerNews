@@ -1,0 +1,19 @@
+
+<html>
+<body>
+<table>
+<form class="navbar-form navbar-left" action="{% url "personal" %}" method="POST">
+
+{% csrf_token %}
+<div class='form-group'>
+<ul>
+    {{ form.as_ul }}
+    </ul>
+
+    <input class='form-control' id="save-contact" type="submit" value="Save" />
+    </div>
+    </form>
+    </table>
+	</body>
+    </html>
+

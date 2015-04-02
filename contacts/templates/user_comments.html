@@ -1,0 +1,17 @@
+{% extends 'nav.html' %}
+{% load staticfiles %}
+{% block content %}
+</br></br></br>
+<div>
+    <table align='center' class='table table-bordered table-striped table-condesnsed articles'>
+        {% for comment in comments %}
+        <tr>
+            <td>
+                <p>{{ comment.comment }}</br> article: <a href="/accounts/articles/comments/{{ comment.article.id }}/">{{ comment.article.description }}</a> </br>{{ comment.date|timesince:now }} ago
+                </p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

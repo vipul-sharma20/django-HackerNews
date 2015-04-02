@@ -1,0 +1,231 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+
+    .bigicon {
+        font-size: 35px;
+        color: #36A0FF;
+    }
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lorem Ipsum</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}"/>
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/bootstrap-social.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mystyle.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <script src="{% static 'js/app1.js' %}"></script>
+    <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+     <nav id="nav" class="navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+
+             <div class="navbar-header page-scroll">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            <a class="navbar-brand page-scroll" href="#page-top">Lorem Ipsum</a>                    </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    {% if name %}
+                    <li>
+                        <a href="/users/{{ name }}">{{ name }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="/accounts/login/">Login</a>
+                    </li>
+                    <li>
+                        <a href='/accounts/register/'>Register</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+                <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro-section">
+        <div class="jumbotron" id="intro">
+            <div class="container">
+                <h1 class="heading"><b>Lorem</b> Ipsum</h1>
+                <p id="changeText" class="heading"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <!-- col-lg-4 col-lg-offset-2" -->
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p class="heading">
+                    <b>Lorem Ipsum</b> is a social news website built especially for
+                    the programmers, entrepreneurs and geeks out there, delivering content related to computer
+                    science. Here you can appease your intellectual curiosity in pursuit of knowledge.
+                    </p>
+                </div>
+               <!-- <div class="col-lg-4">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p class="heading">Check</P></div>
+                </div> -->
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="row">
+                    <h1 class="heading"><b>What does it do ??</b></h1>
+                    </br>
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <p class="heading">
+                        <b>Lorem Ipsum</b> provides a unified platform for sharing social news, articles, blog posts.. where one can
+                        get access to quality content, scrutinized by the votes of the users
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <div class="heading">
+                    	<img src="{% static 'icons/me.png' %}" id="img">
+                        <h1>Vipul Sharma</h1>
+			<a class="btn btn-social-icon btn-github" href="https://github.com/vipul-sharma20" title="GitHub" rel="nofollow">
+    			<i class="fa fa-github"></i>
+  			</a>
+			<a class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/vipul.py" title="Facebook" rel="nofollow">
+	    		<i class="fa fa-facebook"></i>
+	  		</a>
+			<a class="btn btn-social-icon btn-linkedin" href="https://in.linkedin.com/pub/vipul-sharma/8a/749/128" title="Linkedin" rel="nofollow">
+	    		<i class="fa fa-linkedin"></i>
+	  		</a>
+			<a class="btn btn-social-icon btn-google-plus" href="https://plus.google.com/u/0/+VipulSharma20/" title="GooglePlus" rel="nofollow">
+	    		<i class="fa fa-google-plus"></i>
+	  		</a>
+                    </div>
+		</div>
+               <div class="col-lg-5">
+                    <div class="col-lg-12 col-lg-offset-2 text-center">
+                        <!--- form start -->
+            <div class="well well-sm">
+                <form class="form-horizontal" method="POST" >
+                    {% csrf_token %}
+                   <fieldset>
+                        <legend class="text-center heading">Contact us</legend>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_first_name" name="first_name" maxlength="120" type="text" placeholder="First Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_last_name" name="last_name" maxlength="120" type="text" placeholder="Last Name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_email" name="email" type="text" placeholder="Email Address" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="id_message" name="message" maxlength="255" placeholder="Enter your message for us here." rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-default heading">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+<!--- End form -->
+		    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
+
+</body>
+
+</html>

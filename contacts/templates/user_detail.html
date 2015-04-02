@@ -1,0 +1,51 @@
+{% extends "nav.html" %}
+
+{%block content %}
+<h2 align='center' class='heading'>{{ object.user }}'s Profile</h2>
+
+
+<div>
+    <table class="table table-bordered table-condensed table-striped profile" align='center'>
+    <tr>
+        <td style="text-align:center" class='heading'>
+            <b> User </b>
+        </td>
+        <td style="text-align:center">
+            {{ object.user }}
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center" class='heading'>
+
+            <b>About</b>
+        </td>
+        <td style="text-align:center">
+            {{ object.about }}
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center" class='heading'>
+            <b>Reputation</b>
+        </td>
+        <td style="text-align:center">
+            {{ object.reputation }}
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center" class='heading'>
+            <b>Website/Blog:</b>
+        </td>
+        <td style="text-align:center">
+            {{ object.website }}
+        </td>
+    </tr>
+    </table>
+</div>
+<div align='center'>
+{% if object.user == user %}
+<p><a href="{% url 'edit_profile' %}">Edit Profile</a></p>
+{% endif %}
+<p><a href="/users/{{ object.user }}/submissions/">Submissions</a></p>
+<p><a href="/users/{{ object.user }}/comments/">Comments</a></p>
+</div>
+{% endblock %}

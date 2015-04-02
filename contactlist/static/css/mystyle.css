@@ -1,0 +1,88 @@
+#intro{
+  font-size:200%;
+    background-color: #3b5998;
+    color: #ffffff;
+}
+#about{
+    font-size:200%;
+    color: #fff;
+    background-color: #00933B;
+}
+#services
+{
+    font-size:200%;
+    color: #fff;
+    background-color: #F2B50F;
+}
+#contact
+{
+    font-size:200%;
+    color:#000;
+    background-color: #dfe3ee;
+}
+#nav
+{
+    background-color: #fff;
+}
+.btn-custom {
+        background-color: #FFFFFF;
+        border-color: #CCCCCC;
+        color: #333333;
+            }
+.btn-custom:hover {
+        background-color: #FFF;
+        border-color: #fff;
+        color: #333333;
+        }
+.heading
+{
+    /* font-family: 'Lobster Two', cursive; */
+    font-family:Trebuchet MS, Helvetica, sans-serif;
+}
+.logo-center{
+  border:inherit 8px #000000;
+  -moz-border-radius-topleft: 75px;
+  -moz-border-radius-topright:75px;
+  -moz-border-radius-bottomleft:75px;
+  -moz-border-radius-bottomright:75px;
+  -webkit-border-top-left-radius:75px;
+  -webkit-border-top-right-radius:75px;
+  -webkit-border-bottom-left-radius:75px;
+  -webkit-border-bottom-right-radius:75px;
+  border-top-left-radius:75px;
+  border-top-right-radius:75px;
+  border-bottom-left-radius:75px;
+  border-bottom-right-radius:75px;
+}
+#img
+{
+    width:50%;
+    height:50%;
+}
+.reg{
+    width: 30%;
+}
+.log
+{
+    width: 50%;
+}
+.tablog
+{
+    background-color:#000;
+}
+.post
+{
+    width: 30%;
+}
+.postform
+{
+    font-size:150%;
+}
+.articles
+{
+    width:90%;
+}
+.profile
+{
+    width:45%;
+}

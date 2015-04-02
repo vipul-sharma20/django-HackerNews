@@ -1,0 +1,19 @@
+{% extends 'nav.html' %}
+{% load staticfiles %}
+{% block content %}
+</br></br></br>
+<div>
+    <table align='center' class='table table-bordered table-striped table-condesnsed articles'>
+        {% for article in articles %}
+        <tr>
+            <td>
+                <p>
+                    <a href='{{ article.link }}'>{{ article.description }}</a>
+                    </br>votes: {{ article.votes }}
+                </p>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}

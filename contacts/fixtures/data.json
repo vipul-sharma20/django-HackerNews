@@ -1,0 +1,173 @@
+[
+  {
+    "pk": 1, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "SpaceX Raises $1 Billion In New Funding From Google And\u00a0Fidelity", 
+      "link": "http://techcrunch.com/2015/01/20/spacex-raises-1-billion-in-new-funding-from-google-and-fidelity/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "\u201cThe Interview\u201d Hits Netflix On\u00a0Saturday", 
+      "link": "http://techcrunch.com/2015/01/20/the-interview-hits-netflix-on-saturday/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Netflix Beats The Street In Q4 By Adding 4.3M New Streaming Subscribers\u00a0Worldwide", 
+      "link": "http://techcrunch.com/2015/01/20/netflix-beats-the-street-in-the-fourth-quarter-by-adding-4-3-million-new-streaming-subscribers-worldwide/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Startup L. Jackson Speaks Out About Diversity, Cool Products, And All The People He\u2019s\u00a0Not", 
+      "link": "http://techcrunch.com/2015/01/20/startup-l-jackson-speaks-out-about-diversity-cool-products-and-all-the-people-hes-not/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Facebook Banishes Hoaxes From The News\u00a0Feed", 
+      "link": "http://techcrunch.com/2015/01/20/because-we-blame-facebook/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "LendingRobot Scores $3M To Automate Investing On P2P Lending Platforms Lending Club And\u00a0Prosper", 
+      "link": "http://techcrunch.com/2015/01/20/lendingrobot/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "DARPA\u2019s Incredible Humanoid Robot Can Now Walk On Its Own Two Feet, No Support\u00a0Required", 
+      "link": "http://techcrunch.com/2015/01/20/darpas-incredible-humanoid-robot-can-now-walk-on-its-own-two-feet-no-support-required/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Updated Chrome For iOS App Gets Material Design, Support For\u00a0Handoff", 
+      "link": "http://techcrunch.com/2015/01/20/updated-chrome-for-ios-app-gets-material-design-support-for-handoff/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "NBC Will Live Stream The Super Bowl For\u00a0Free", 
+      "link": "http://techcrunch.com/2015/01/20/nbc-will-live-stream-the-super-bowl-for-free/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Pillow Raises $2.65 Million To Take The Friction Out Of Airbnb\u00a0Rentals", 
+      "link": "http://techcrunch.com/2015/01/20/pillow-2-65m/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Stack Exchange Raises $40M Led By A16Z To Boost Its Programmer\u00a0Forums", 
+      "link": "http://techcrunch.com/2015/01/20/stack-exchange-raises-40m-led-by-a16z-to-boost-its-programmer-forums/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "With $1M In Funding, Farm Hill Aims To Deliver Delicious Healthy Meals In The\u00a0\u2018Burbs", 
+      "link": "http://techcrunch.com/2015/01/20/with-1m-in-funding-farm-hill-aims-to-deliver-delicious-healthy-meals-in-the-burbs/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "This List Of 2014\u2019s Worst Passwords, Including \u2018123456,\u2019 Is\u00a0Embarrassing", 
+      "link": "http://techcrunch.com/2015/01/20/this-list-of-2014s-worst-passwords-including-123456-is-embarrassing/", 
+      "timestamp": "2015-01-20"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "SoftBank Emerges As The Biggest Challenger To\u00a0Uber", 
+      "link": "http://techcrunch.com/2015/01/19/softbank-taxi-apps/", 
+      "timestamp": "2015-01-19"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Snapchat\u2019s Pricey Ads Could Be Too\u00a0Pricey", 
+      "link": "http://techcrunch.com/2015/01/19/you-could-get-so-much-more/", 
+      "timestamp": "2015-01-19"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "How The Watch Industry Will Save\u00a0Itself", 
+      "link": "http://techcrunch.com/2015/01/19/how-the-watch-industry-can-save-itself/", 
+      "timestamp": "2015-01-19"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "This Is How Xiaomi Keeps The Cost Of Its Smartphones So\u00a0Low", 
+      "link": "http://techcrunch.com/2015/01/19/xiaomi-secret-sauce/", 
+      "timestamp": "2015-01-19"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "Plaxo Co-Founder Minh Nguyen Charged With\u00a0Murder", 
+      "link": "http://techcrunch.com/2015/01/18/plaxo-co-founder-charged-with-murder/", 
+      "timestamp": "2015-01-18"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "contacts.news", 
+    "fields": {
+      "text": "This Fake Phone Charger Is Actually Recording Every Key You\u00a0Type", 
+      "link": "http://techcrunch.com/2015/01/14/this-fake-phone-charger-is-actually-recording-every-key-you-type/", 
+      "timestamp": "2015-01-14"
+    }
+  }
+]

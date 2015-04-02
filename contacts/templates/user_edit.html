@@ -1,0 +1,34 @@
+{% extends 'nav.html' %}
+{% block content %}
+</br></br></br>
+<div align=center>
+<form method='POST' action =''>
+    {% csrf_token %}
+    <table class='table table-bordered table condensed table-striped profile'>
+    	<tr>
+    		<td style='text-align:center'>
+                    <p class='heading'><b>About: </b></p>
+    		</td>
+    		<td style='text-align:center'>
+                    <textarea id='id_about' maxlength="140" name='about' rows='5'></textarea>
+   			</td>
+
+   		</tr>
+   		<tr>
+     		    <td style='text-align:center'>
+                        <p class='heading'><b>Website/Blog: </b></p>
+    		    </td>
+    		    <td style='text-align:center'>
+   				{{ form.website }}
+   		    </td>
+   		</tr>
+    </table>
+    <div class="btn-group btn-group-justified">
+
+   <p align='center'>
+   	<input type='submit' value='Update' align="center" class="btn btn-default" role="button"/>
+    </p>
+  </div>
+</form>
+</div>
+{% endblock %}

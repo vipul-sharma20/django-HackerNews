@@ -1,0 +1,32 @@
+{% extends "landing.html" %}
+
+{% block content %}
+<div>
+	<div id='register' align="center">
+	<h2> Register </h2>
+	<form action='/accounts/register/' method='post'>{% csrf_token %}
+	<table>
+		<tr>
+		<td><p id='register'>Username </p></td><td>{{ form.username }}
+		</tr>
+		<tr>
+		<td><p id='register'>Password </p></td><td>{{ form.password1 }}
+		</tr>
+
+		<tr>
+		<td><p id='register'>Confirm Password </p></td><td>{{ form.password2 }}
+		</tr>
+	</table>
+</br>
+<div class="btn-group btn-group-justified">
+  
+   <p align='center'>
+   	<input type='submit' value='Register' align="center" class="btn btn-default" role="button"/>
+    </p>
+  </div>
+</div>
+	
+	</form>
+</div>
+</div>
+{% endblock %}

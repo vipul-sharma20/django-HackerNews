@@ -1,0 +1,19 @@
+{% extends 'nav.html' %}
+{% load staticfiles %}
+{% block content %}
+
+<h2 class='heading' align='center'>News</h2>
+<div>
+    <table class='table table-bordered table-striped table-condensed articles' align='center'>
+    {% for article in news %}
+        <tr>
+            <td>
+                <a href="/accounts/news/{{ article.id }}/">{{ article.text }}</a>
+            </br>
+            {{ article.timestamp }}
+        </td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}
