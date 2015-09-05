@@ -11,13 +11,10 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import dj_database_url
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-BASE_DIR1 = os.path.dirname(os.path.abspath(__file__))
-#MEDIA_ROOT = '/home/vipul/django-contactlist/media/'
-MEDIA_ROOT = BASE_DIR1
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MEDIA_ROOT = BASE_DIR
 MEDIA_URL = '/media/'
-#print BASE_DIR1
 LOGIN_EXEMPT_URLS = (
                     r'^accounts/auth/$',
                     r'^accounts/register/$',
@@ -54,10 +51,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.contenttypes',
     'django.contrib.sites',
-    #'social_auth',
     'contacts',
     'south',
-    #'registration',
 )
 
 SITE_ID = 1
@@ -72,31 +67,16 @@ MIDDLEWARE_CLASSES = (
     'contactlist.middleware.LoginRequiredMiddleware',
 )
 
-"""AUTHENTICATION_BACKENDS = ('social_auth.backends.google.GoogleOAuth2Backend',
-        'django.contrib.auth.backends.ModelBackend',
-    #'social_auth.backends.facebook.FacebookBackend',
-)"""
-
-
 ROOT_URLCONF = 'contactlist.urls'
 
 WSGI_APPLICATION = 'contactlist.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-"""DATABASES = {
-    'default': {
-        #'ENGINE': 'django_mongodb_engine',
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'NAME': 'my_database',
-    }
-}"""
 DATABASES = {
             'default': dj_database_url.config(
-            default='sqlite:////{0}'.format(os.path.join(BASE_DIR1, 'db.sqlite3'))
+            default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
                             )
             }
 # Internationalization
@@ -121,11 +101,7 @@ GOOGLE_OAUTH2_CLIENT_SECRET = '2gOf_ZOjMyPXDQ50C47MuGZn'
 GOOGLE_WHITE_LISTED_DOMAINS = ['incuna.com']
 SOCIAL_AUTH_USER_MODEL = 'auth.User'
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.6/howto/static-files/
-#STATICFILES_DIRS = ('/home/vipul/django-contactlist/static',)
-STATICFILES_DIRS = (BASE_DIR1+'/static',)
-#STATIC_ROOT = 'home/vipul/django-contactlist/collectstatic/'
-STATIC_ROOT = BASE_DIR1+'/collectstatic/'
+STATICFILES_DIRS = (BASE_DIR+'/static',)
+STATIC_ROOT = BASE_DIR+'/collectstatic/'
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
