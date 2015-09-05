@@ -28,7 +28,6 @@ class UserProfileDetailView(DetailView):
         user = super(UserProfileDetailView, self).get_object(queryset)
         UserProfile.objects.get_or_create(user=user)
         b = UserProfile.objects.get(user=user)
-        print dir(b)
         return b
 
 def landing(request):
@@ -39,10 +38,7 @@ def landing(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             temp = form.save(commit=True)
-            print temp
             return render_to_response('landing.html', context)
-        else:
-            print form.errors
     else:
         if request.user.is_authenticated():
             return HttpResponseRedirect('/accounts/articles')
@@ -118,8 +114,6 @@ def personal_info(request):
         if form.is_valid():
             form.save(commit=True)
             return HttpResponseRedirect('/index')
-        else:
-            print form.errors
     else:
          form = PersonalForm()
     return render_to_response('personal_form.html', {'form': form}, context)
@@ -132,14 +126,12 @@ class UserProfileEditView(UpdateView):
 
     def get_object(self, queryset=None):
         a = UserProfile.objects.get(user=self.request.user)
-        #print dir(a)
         return a
 
     def form_valid(self, form):
         instance = form.instance
         instance.user = self.request.user
         instance.save()
-        print 'here'
         return HttpResponseRedirect('/accounts/articles')
 
 def article_view(request):
@@ -148,7 +140,6 @@ def article_view(request):
     score_dict = {}
     rend = []
     now = datetime.datetime.utcnow().replace(tzinfo=utc)
-    #print dir(posts[0])
     for post in posts:
         diff = post.time_stamp - datetime.datetime.utcnow().replace(tzinfo=utc)
         t = abs((diff.days)) * 24 + diff.seconds/3600
@@ -159,9 +150,7 @@ def article_view(request):
 
     for w in sorted(score_dict, key=score_dict.get, reverse=True):
         rend.append(w)
-        print w.description, w.score
 
-    #print dir(UserProfile.objects.get(user=request.user))
     return render_to_response('articles.html', {'posts':rend, \
             'full_name':request.user.username, 'now':now, \
             'reputation':UserProfile.objects.get(user=request.user).reputation}, \
@@ -173,7 +162,6 @@ def post_article_view(request):
     today_min = datetime.datetime.combine(datetime.date.today(), datetime.time.min)
     today_max = datetime.datetime.combine(datetime.date.today(), datetime.time.max)
     p = Articles.objects.filter(uploader=request.user, time_stamp__range=(today_min, today_max))
-    print p.count()
     if p.count() > 3:
         return HttpResponse("Max post limit for today reached! try posting \
                         tomorrow </br><a href='/accounts/articles/'>home</a>")
@@ -185,8 +173,6 @@ def post_article_view(request):
             temp.time_stamp = datetime.datetime.now()
             temp.save()
             return HttpResponseRedirect('/accounts/articles/')
-        else:
-            print form.errors
     else:
         form = PostArticleForm()
     return render_to_response(template_name, {'form':form}, \
@@ -220,10 +206,7 @@ def add_comment(request, article_id):
             temp.date = datetime.datetime.now()
             temp.article_id = article_id
             temp.save()
-            #return HttpResponse(temp.comment)
             return HttpResponseRedirect('/accounts/articles/comments/'+str(article_id))
-        else:
-            print form.errors
     else:
         form = CommentForm()
     try:
