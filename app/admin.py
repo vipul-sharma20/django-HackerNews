@@ -1,5 +1,5 @@
 from django.contrib import admin
-from contacts.models import Contact, News, UserProfile, Articles, Like, \
+from app.models import Contact, News, UserProfile, Articles, Like, \
                             ContactUs, Comment
 class ChoiceInline(admin.TabularInline):
     pass

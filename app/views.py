@@ -4,8 +4,8 @@ from django.template import Context, RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import UpdateView
-from contacts.models import User, Contact, UserProfile, Articles, Like, ContactUs, Comment, News, NewsContent
-from contacts.forms import ContactForm, UserForm, PostArticleForm, CommentForm
+from app.models import User, Contact, UserProfile, Articles, Like, ContactUs, Comment, News, NewsContent
+from app.forms import ContactForm, UserForm, PostArticleForm, CommentForm
 from django.views.generic.edit import CreateView
 from django.contrib import auth
 from django.contrib.auth import get_user_model

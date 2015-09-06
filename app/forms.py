@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 from django import forms
-from contacts.models import Comment, Contact, UserProfile, Articles, ContactUs
+from app.models import Comment, Contact, UserProfile, Articles, ContactUs
 class DocumentForm(forms.Form):
 
     docfile = forms.FileField(

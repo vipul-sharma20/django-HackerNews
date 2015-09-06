@@ -1,5 +1,5 @@
 """
-Django settings for contactlist project.
+Django settings for project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -51,7 +51,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.contenttypes',
     'django.contrib.sites',
-    'contacts',
+    'app',
     'south',
 )
 
@@ -64,12 +64,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'contactlist.middleware.LoginRequiredMiddleware',
+    'project.middleware.LoginRequiredMiddleware',
 )
 
-ROOT_URLCONF = 'contactlist.urls'
+ROOT_URLCONF = 'project.urls'
 
-WSGI_APPLICATION = 'contactlist.wsgi.application'
+WSGI_APPLICATION = 'project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases

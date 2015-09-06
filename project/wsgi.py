@@ -1,5 +1,5 @@
 """
-WSGI config for contactlist project.
+WSGI config for project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 """
 
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "contactlist.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "project.settings")
 from whitenoise.django import DjangoWhiteNoise
 
 from django.core.wsgi import get_wsgi_application
