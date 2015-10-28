@@ -50,9 +50,6 @@ def details(request, contact_id=1):
     return render_to_response('disp.html', {'contact': Contact.objects.get \
             (id=contact_id)})
 
-def template(request):
-    return render_to_response('template.html')
-
 def login(request):
     c = {}
     c.update(csrf(request))
@@ -151,9 +148,10 @@ def article_view(request):
     for w in sorted(score_dict, key=score_dict.get, reverse=True):
         rend.append(w)
 
-    return render_to_response('articles.html', {'posts':rend, \
-            'full_name':request.user.username, 'now':now, \
-            'reputation':UserProfile.objects.get(user=request.user).reputation}, \
+    data = {}
+    data['posts'] = rend
+    data['now'] = now
+    return render_to_response('articles.html', data, \
             context_instance=RequestContext(request))
 
 def post_article_view(request):
