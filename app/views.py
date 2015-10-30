@@ -39,11 +39,11 @@ def landing(request):
         if form.is_valid():
             temp = form.save(commit=True)
             return render_to_response('landing.html', context)
-    else:
+    """else:
         if request.user.is_authenticated():
             return HttpResponseRedirect('/accounts/articles')
         else:
-            form = ContactForm()
+            form = ContactForm()"""
     return render_to_response('landing.html', {'form': form}, context)
 
 def details(request, contact_id=1):
@@ -87,7 +87,7 @@ def invalid_login(request):
 
 def logout(request):
     auth.logout(request)
-    return render_to_response('landing.html')
+    return HttpResponseRedirect('/')
 
 def register_user(request):
     if request.method == 'POST':
@@ -151,9 +151,15 @@ def article_view(request):
     data = {}
     data['posts'] = rend
     data['now'] = now
+    if request.user.is_authenticated():
+        data['full_name'] = request.user.username
+        data['reputation'] = UserProfile.objects.get(user=request.user).reputation
+
     return render_to_response('articles.html', data, \
             context_instance=RequestContext(request))
 
+
+@login_required
 def post_article_view(request):
     model = Articles
     template_name = 'post_articles.html'
@@ -193,6 +199,8 @@ def like_article(request, article_id):
     a.save()
     return HttpResponse(a.votes)
 
+
+@login_required
 def add_comment(request, article_id):
     """Add a new comment."""
     template = "comment.html"

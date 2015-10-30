@@ -41,8 +41,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-LOGIN_URL = '/accounts/login'
-LOGIN_REDIRECT_URL = '/accounts/loggedin'
+# LOGIN_URL = '/accounts/login'
+# LOGIN_REDIRECT_URL = '/accounts/loggedin'
 
 # Application definition
 
@@ -67,7 +67,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'project.middleware.LoginRequiredMiddleware',
 )
 
 ROOT_URLCONF = 'project.urls'
