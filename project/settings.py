@@ -24,7 +24,7 @@ MEDIA_URL = '/media/'
                     r'^accounts/invalid/$',
                     r'^me/$',
                     r'^accounts/articles/comments/newest/$',
-	            r'^$',
+                    r'^$',
                     )
 """
 
