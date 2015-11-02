@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'app',
     'south',
+    'social_auth',
 )
 
 SITE_ID = 1
@@ -81,6 +82,9 @@ DATABASES = {
             default='sqlite:////{0}'.format(os.path.join(BASE_DIR, 'db.sqlite3'))
                             )
             }
+
+AUTHENTICATION_BACKENDS = ('social_auth.backends.google.GoogleOAuth2Backend',)
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -95,6 +99,10 @@ USE_L10N = True
 USE_TZ = True
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/accounts/articles/'
+SOCIAL_AUTH_USER_MODEL = 'app.User'
+SOCIAL_AUTH_USERNAME_IS_FULL_EMAIL = True
 
 STATICFILES_DIRS = (BASE_DIR+'/static',)
 STATIC_ROOT = BASE_DIR+'/collectstatic/'

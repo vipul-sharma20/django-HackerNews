@@ -32,6 +32,7 @@ urlpatterns = patterns('',
     url(r'accounts/news/$', 'app.views.news'),
     url(r'^me/$', 'app.views.myself'),
     url(r'^$', 'app.views.article_view'),
+    url(r'', include('social_auth.urls')),
 
     ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
