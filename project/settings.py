@@ -15,18 +15,6 @@ import dj_database_url
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MEDIA_ROOT = BASE_DIR
 MEDIA_URL = '/media/'
-"""LOGIN_EXEMPT_URLS = (
-                    r'^accounts/auth/$',
-                    r'^accounts/register/$',
-                    r'^accounts/articles/$',
-                    r'^index/$',
-                    r'^admin/$',
-                    r'^accounts/invalid/$',
-                    r'^me/$',
-                    r'^accounts/articles/comments/newest/$',
-                    r'^$',
-                    )
-"""
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
