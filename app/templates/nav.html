@@ -72,11 +72,15 @@
 		<ul class="nav navbar-nav navbar-right">
                     {% if full_name and reputation %}
                     <li>
-                    <a href="/users/{{ full_name }}">{{ full_name }} ({{ reputation }})</a>
+                        <a href="/users/{{ full_name }}">{{ full_name }} ({{ reputation }})</a>
                     </li>
                     <li>
                         <a href="/accounts/logout/">Logout</a>
                     <li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
                     {% endif %}
                 </ul>
             </div>
