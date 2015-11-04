@@ -39,11 +39,6 @@ def landing(request):
         if form.is_valid():
             temp = form.save(commit=True)
             return render_to_response('landing.html', context)
-    """else:
-        if request.user.is_authenticated():
-            return HttpResponseRedirect('/accounts/articles')
-        else:
-            form = ContactForm()"""
     return render_to_response('landing.html', {'form': form}, context)
 
 def details(request, contact_id=1):
