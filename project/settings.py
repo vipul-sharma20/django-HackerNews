@@ -71,7 +71,10 @@ DATABASES = {
                             )
             }
 
-AUTHENTICATION_BACKENDS = ('social_auth.backends.google.GoogleOAuth2Backend',)
+AUTHENTICATION_BACKENDS = (
+    'social_auth.backends.google.GoogleOAuth2Backend',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
