@@ -3,6 +3,7 @@ dj-static==0.0.6
 Django==1.6.1
 django-password-reset==0.7
 django-registration==1.0
+django-social-auth==0.8.1
 django-toolbelt==0.0.1
 gnureadline==6.3.3
 gunicorn==19.1.1
