@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'app',
     'south',
-    'social_auth',
+    #'social_auth',
 )
 
 SITE_ID = 1
