@@ -5,7 +5,6 @@ class Contact(models.Model):
 
     first_name = models.CharField(max_length=255, )
     last_name = models.CharField(max_length=255,)
-    # profile_pic = models.ImageField(upload_to='pictures', blank=True)
     email = models.EmailField()
 
     def __str__(self):
